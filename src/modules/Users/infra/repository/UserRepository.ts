@@ -1,4 +1,4 @@
-import { prismaClient } from "../../prisma/prismaClient";
+import { prismaClient } from "../../../../shared/infra/prisma/prismaClient";
 import { IUserDTO } from "../entities/User";
 import { IUserRepository } from "./IUserRepository";
 

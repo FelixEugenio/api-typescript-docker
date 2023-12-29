@@ -1,5 +1,5 @@
-import { IUserDTO } from "../entities/User";
-import { IUserRepository } from "../repository/IUserRepository";
+import { IUserDTO } from "../../Users/infra/entities/User";
+import { IUserRepository } from "../../Users/infra/repository/IUserRepository";
 
 class RegisterUserUseCases{
 
