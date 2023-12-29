@@ -1,5 +1,5 @@
-import { RegisterUserController } from "../../../useCases/registerUser/registerUserController";
-import { RegisterUserUseCases } from "../../../useCases/registerUser/registerUserUseCases"
+import { RegisterUserController } from "../../useCases/registerUser/registerUserController";
+import { RegisterUserUseCases } from "../../useCases/registerUser/registerUserUseCases";
 import { UserRepository } from "./UserRepository"
 
 const registerUserFactory = () => {

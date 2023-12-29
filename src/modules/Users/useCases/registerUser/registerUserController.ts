@@ -1,5 +1,5 @@
-import { IUserDTO } from "../../Users/infra/entities/User";
-import { UserRepository } from "../../Users/infra/repository/UserRepository";
+import { IUserDTO } from "../../infra/entities/User";
+import { UserRepository } from "../../infra/repository/UserRepository";
 import { RegisterUserUseCases } from "./registerUserUseCases"
 import express from 'express'
 

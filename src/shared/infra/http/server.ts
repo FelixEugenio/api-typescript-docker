@@ -1,6 +1,6 @@
 import express,{response,Request} from 'express'
 const app = express()
-import { router } from './shared/http/routes'
+import { router } from './routes'
 
 app.use(express.json())
 app.use(router)
