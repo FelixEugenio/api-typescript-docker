@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { registerUserFactory } from "../../../../modules/Users/useCases/registerUser/registerUserFactory";
+import { RegisterUserController } from "../../../../modules/Users/useCases/registerUser/registerUserController";
 const registerRoutes = Router();
 
-const registerUserController = registerUserFactory();
+const registerUserController = new RegisterUserController();
 
 registerRoutes.post('/',registerUserController.handle);
 
