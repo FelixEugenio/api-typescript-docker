@@ -1,15 +1,9 @@
+import { container } from "tsyringe";
 import { IUserDTO } from "../../infra/entities/User";
 import { UserRepository } from "../../infra/repository/UserRepository";
 import { RegisterUserUseCases } from "./registerUserUseCases"
 import express from 'express'
 
-
-const factory = () =>{
-    const userRepository = new UserRepository();
-    const useCase = new RegisterUserUseCases(userRepository);
-
-    return useCase;
-}
 
 class RegisterUserController{
 
@@ -19,7 +13,9 @@ class RegisterUserController{
 
         const { email, name, password, phone }: IUserDTO = req.body;
 
-        await factory().execute({
+        const registerUseCase = container.resolve(RegisterUserUseCases)
+
+        await registerUseCase.execute({
             email,
             name,
             password,

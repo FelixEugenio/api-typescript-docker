@@ -1,6 +1,6 @@
-import { RegisterUserController } from "../../useCases/registerUser/registerUserController";
-import { RegisterUserUseCases } from "../../useCases/registerUser/registerUserUseCases";
-import { UserRepository } from "./UserRepository"
+import { RegisterUserController } from "./registerUserController";
+import { RegisterUserUseCases } from "./registerUserUseCases";
+import { UserRepository } from "../../infra/repository/UserRepository"
 
 const registerUserFactory = () => {
 
