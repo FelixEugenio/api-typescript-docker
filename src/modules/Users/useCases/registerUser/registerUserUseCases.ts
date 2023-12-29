@@ -1,3 +1,4 @@
+import 'reflect-metadata'
 import { inject, injectable } from "tsyringe"
 import { IUserDTO } from "../../infra/entities/User"
 import { IUserRepository } from "../../infra/repository/IUserRepository"
@@ -7,7 +8,7 @@ class RegisterUserUseCases{
 
     constructor(
       @inject('UserRepository')
-      private userRepository:IUserRepository
+      private readonly userRepository:IUserRepository
       
       ){}
 
