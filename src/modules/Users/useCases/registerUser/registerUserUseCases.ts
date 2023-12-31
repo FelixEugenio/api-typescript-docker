@@ -2,6 +2,7 @@ import 'reflect-metadata'
 import { inject, injectable } from "tsyringe"
 import { IUserDTO } from "../../infra/entities/User"
 import { IUserRepository } from "../../infra/repository/IUserRepository"
+import { hash } from 'bcryptjs'
 
 @injectable()
 class RegisterUserUseCases{
@@ -12,8 +13,10 @@ class RegisterUserUseCases{
       
       ){}
 
+   
     async execute({email,name,password,phone}:IUserDTO):Promise<void>{
-      await this.userRepository.register({email,name,password,phone})
+      const PasswordHash = await hash(password,8);
+      await this.userRepository.register({email,name,password:PasswordHash,phone})
     }
 
 }
