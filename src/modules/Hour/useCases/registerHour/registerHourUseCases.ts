@@ -7,7 +7,7 @@ import { IHourDTO } from '../../infra/entities/Hour';
 class RegisterHourUseCases{
 
     constructor(
-      @inject('UserRepository')
+      @inject('HourRepository')
       private readonly hourRepository:IHourRepository
       
       ){}
