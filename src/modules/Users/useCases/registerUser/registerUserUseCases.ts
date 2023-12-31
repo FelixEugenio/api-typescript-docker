@@ -16,7 +16,7 @@ class RegisterUserUseCases{
    
     async execute({email,name,password,phone}:IUserDTO):Promise<void>{
       const PasswordHash = await argon2.hash(password);
-      await this.userRepository.register({email,name,password,phone})
+      await this.userRepository.register({email,name,password:PasswordHash,phone})
     }
 
 }
